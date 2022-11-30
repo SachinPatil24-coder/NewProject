@@ -1,0 +1,35 @@
+<html>
+<header>
+</header>
+
+<body>
+    <h4>Write a JavaScript program to replace every character in a given string with the character
+        following it in the alphabet</h4>
+</body>
+
+</html>
+<script>
+
+    function replaceString(str) {
+
+        var newString = '';
+        for (var i = 0; i < str.length; i++) {
+            
+            if (64 < str.charCodeAt(i) && str.charCodeAt(i) < 91) {
+                newString += String.fromCharCode(str.charCodeAt(i) + 1);
+            }
+            
+            if (96 < str.charCodeAt(i) && str.charCodeAt(i) < 123) {
+                newString += String.fromCharCode(str.charCodeAt(i) + 1);
+            }
+        }
+        return newString;
+    }
+
+    const string = prompt('Enter a string: ');
+
+    const result = replaceString(string);
+    console.log(result);
+    document.write("Replace String is: " + result);
+
+</script>

@@ -1,0 +1,26 @@
+<html>
+<header>
+    <h4>Write a JavaScript program to reverse a given string. </h4>
+</header>
+
+<body></body>
+
+</html>
+
+<script>
+
+    function stringLetter(str) {
+
+        let newString = "";
+        for (let i = str.length - 1; i >= 0; i--) {
+            newString += str[i];
+        }
+        return newString;
+    }
+    const string = prompt('Enter a string: ');
+
+    const result = stringLetter(string);
+    console.log(result);
+    document.write("Reverse String is: " + result);
+
+</script>
